@@ -1,0 +1,11 @@
+<div id="home">
+  <h1>Welcome!</h1>
+  <h3>Please login by entering your user name.</h3>
+  <div class="input-row">
+    <mat-form-field>
+      <mat-label>User name</mat-label>
+      <input type="text" matInput [formControl]="userNameInput" (keyup.enter)="sendUsernameInput()">
+    </mat-form-field>
+    <button class="btn btn--accent btn--md" (click)="sendUsernameInput()">Send</button>
+  </div>
+</div>

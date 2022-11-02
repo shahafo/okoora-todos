@@ -1,0 +1,34 @@
+@import '../../../styles/vars';
+
+.todo-item {
+  @include flex-me(row, space-between, stretch);
+  gap: calc($spacer-sm/2);
+  width: 100%;
+  .title {
+    background-color: $secondary;
+    width: 75%;
+    padding: $spacer-sm;
+    font-size: 1.1rem;
+    .new {
+      font-size: 0.65rem;
+      background-color: $primary;
+      color: $secondary;
+      padding: calc($spacer-sm/2);
+      border-radius: $spacer-sm;
+    }
+  }
+  .status {
+    width: 25%;
+    padding: $spacer-sm;
+    color: $secondary;
+    @include flex-me(row, center, center);
+    &.done {
+      background-color: $green;
+      font-weight: bold;
+    }
+    &.pending {
+      background-color: $warning;
+      opacity: 0.7;
+    }
+  }
+}

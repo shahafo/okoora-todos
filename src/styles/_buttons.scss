@@ -1,0 +1,27 @@
+.btn {
+  border-radius: 0.5rem;
+  &--sm {
+    @extend .btn;
+    padding: calc($spacer-sm/2) $spacer-sm;
+  }
+  &--md {
+    @extend .btn;
+    padding: calc($spacer/2) $spacer;
+  }
+  &--lg {
+    @extend .btn;
+    padding: calc($spacer-lg/2) $spacer-lg;
+  }
+  &--primary {
+    @extend .btn;
+    background-color: $primary;
+    color: $secondary;
+  }
+  &--accent {
+    @extend .btn;
+    background-color: $orange;
+    color: $secondary;
+  }
+}
+
+

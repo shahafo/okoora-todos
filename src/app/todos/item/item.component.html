@@ -1,0 +1,11 @@
+<div class="todo-item">
+  <div class="title">
+    {{ data.title }}
+    <span *ngIf="data.fresh" class="new">NEW</span>
+  </div>
+  <div class="status" [ngClass]="{ 'done' : data.completed, 'pending' : !data.completed }" (click)="toggleStatus()">
+    <span>
+      {{ data.completed ? "Done!" : "Pending" }}
+    </span>
+  </div>
+</div>

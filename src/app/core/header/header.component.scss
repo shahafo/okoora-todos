@@ -1,0 +1,11 @@
+@import "../../../styles/vars";
+
+header {
+  background-color: $primary;
+  color: $secondary;
+  padding: $spacer;
+  text-align: center;
+  h2, h3 {
+    margin: 0px;
+  }
+}

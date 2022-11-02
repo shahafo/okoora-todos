@@ -1,0 +1,35 @@
+<div id="todos">
+  <h1>Here is your list of todos.</h1>
+  <h3>To change status, click on it.</h3>
+  <div class="controls">
+    <div class="controls--item">
+      <div class="heading">
+        Show count:
+      </div>
+      <div class="action">
+        <mat-button-toggle-group [(ngModel)]="showCount">
+          <mat-button-toggle value="5">5</mat-button-toggle>
+          <mat-button-toggle value="10">10</mat-button-toggle>
+          <mat-button-toggle value="20">20</mat-button-toggle>
+          <mat-button-toggle [value]="(todos$ | async)!.length">All</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+    </div>
+    <div class="controls--item">
+      <div class="heading">
+        Show done:
+      </div>
+      <div class="action">
+        <mat-slide-toggle [(ngModel)]="showDone"></mat-slide-toggle>
+      </div>
+    </div>
+    <div class="controls--item">
+      <div class="heading">
+        <button class="btn--md btn--primary" (click)="addTodo()">Add Todo</button>
+      </div>
+    </div>
+  </div>
+  <div class="feed">
+    <todoItem *ngFor="let todo of todos$ | async | showDone:showDone | slice: 0:showCount" [data]="todo"></todoItem>
+  </div>
+</div>

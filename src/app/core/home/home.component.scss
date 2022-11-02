@@ -1,0 +1,11 @@
+@import "../../../styles/vars";
+
+#home {
+  h1 {
+    font-weight: bold;
+  }
+  .input-row {
+    @include flex-me(row, space-evenly, center);
+    gap: $spacer-sm;
+  }
+}

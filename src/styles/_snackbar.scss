@@ -1,0 +1,14 @@
+snack-bar-container {
+  &.warning {
+    background-color: $warning;
+    color: $primary;
+  }
+  &.error {
+    background-color: $error;
+    color: $secondary;
+  }
+  &.good {
+    background-color: $green;
+    color: $secondary;
+  }
+}

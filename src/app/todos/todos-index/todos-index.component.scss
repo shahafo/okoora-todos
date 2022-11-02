@@ -1,0 +1,17 @@
+@import "../../../styles/vars";
+
+#todos {
+  .controls {
+    margin-bottom: $spacer;
+    @include flex-me(row, flex-start, flex-start);
+    gap: $spacer;
+  }
+  .feed {
+    @include flex-me(column, flex-start, flex-start);
+    gap: $spacer;
+    width: 100%;
+    todoItem {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Add Todo</h2>
+<mat-dialog-content class="mat-typography">
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.title">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close class="btn--md btn--accent">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial  class="btn--md btn--primary">Save</button>
+</mat-dialog-actions>
